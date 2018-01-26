@@ -1,4 +1,4 @@
-var avatar = "assets/Matthew.glb";
+var avatar = "assets/Skeleton_Animated.glb";
 var clock = new THREE.Clock();
 var renderer = new THREE.WebGLRenderer({ antialias: false });
 
@@ -6,11 +6,11 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 2000);
-camera.position.set(0, 0, 3);
+camera.position.set(0, 0, 8);
 
 var scene = new THREE.Scene();
 var controls = new THREE.OrbitControls(camera);
-
+	controls.target = new THREE.Vector3(0, 2, 0);
 var mixer = null;
 scene.add(camera);
 
